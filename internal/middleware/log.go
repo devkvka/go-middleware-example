@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// Log is a simple log middleware demonstration
+// Log is a simple logger middleware demonstration
 func Log(h http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Println("Logger before call -- ", r.RemoteAddr)
