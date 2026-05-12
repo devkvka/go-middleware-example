@@ -1,3 +1,5 @@
+// package handler implements simple http handlers
+// for the routes in the project
 package handler
 
 import (
