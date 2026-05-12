@@ -10,7 +10,7 @@ func With(
 	h http.HandlerFunc,
 	middlewares ...func(http.HandlerFunc) http.HandlerFunc,
 ) http.HandlerFunc {
-	// With slices.Backward the middleware gets applied in the order they are
+	// With slices.Backward the middlewares get applied in the order they are
 	// passed in to the function.
 	for _, mw := range slices.Backward(middlewares) {
 		h = mw(h)
