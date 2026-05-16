@@ -10,7 +10,7 @@ import (
 func Auth(h http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.Header.Get("X-Auth-Token") != "secure" {
-			http.Error(w, "unauthorized", http.StatusUnauthorized)
+			http.Error(w, "-> unauthorized", http.StatusUnauthorized)
 			fmt.Println("Unauthed call from -- ", r.RemoteAddr)
 			return
 		}
