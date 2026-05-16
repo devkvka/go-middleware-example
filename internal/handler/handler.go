@@ -9,15 +9,15 @@ import (
 
 func Root(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Handling root for -- ", r.RemoteAddr)
-	fmt.Fprintln(w, "Root called")
+	fmt.Fprintln(w, "-> Root called")
 }
 
 func Secure(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Handling secure for -- ", r.RemoteAddr)
-	fmt.Fprintln(w, "Secure called")
+	fmt.Fprintln(w, "-> Secure called")
 }
 
 func Something(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Handling something for -- ", r.RemoteAddr)
-	fmt.Fprintln(w, "Something called")
+	fmt.Fprintln(w, "-> Something called")
 }
