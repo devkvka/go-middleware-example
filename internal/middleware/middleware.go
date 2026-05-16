@@ -8,6 +8,9 @@ import (
 // With applies each middleware function in the order they are passed.
 // For example if you pass in Auth then Log, the authorization middleware
 // will be run before any logging happens.
+//
+// If both `h` and the return were changed to http.Handler, this could also
+// be used with stateful routes!
 func With(
 	h http.HandlerFunc,
 	middlewares ...func(http.HandlerFunc) http.HandlerFunc,
