@@ -8,17 +8,17 @@ to any route in Go, using the functional options pattern for chaining.
 ('this' refers to the ip:port the project is running on obviously)
 
 ```
-curl this
+$ curl this
 -> Root called
-curl this/secure
+$ curl this/secure
 -> unauthorized
-curl this/something
+$ curl this/something
 -> unauthorized
 
-curl -H "X-Auth-Token: secure" this
+$ curl -H "X-Auth-Token: secure" this
 -> Root called
-curl -H "X-Auth-Token: secure" this/secure
+$ curl -H "X-Auth-Token: secure" this/secure
 -> Secure called
-curl -H "X-Auth-Token: secure" this/something
+$ curl -H "X-Auth-Token: secure" this/something
 -> Something called
 ```
